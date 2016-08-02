@@ -5,6 +5,9 @@ package lab_3;
 
 import java.util.Scanner;
 
+import linkedImpl.InternalJobOpeningLinkedDemo;
+import arrayImpl.InternalJobOpeningArrayDemo;
+
 /**
  * @author Peter Socha
  *

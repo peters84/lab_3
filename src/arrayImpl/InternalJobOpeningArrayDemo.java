@@ -1,7 +1,9 @@
 /**
  * 
  */
-package lab_3;
+package arrayImpl;
+
+import lab_3.Employee;
 
 /**
  * @author USe

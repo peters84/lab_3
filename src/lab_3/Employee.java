@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Employee implements Comparable<Employee> {
 
-	Employee(String firstLast, String YYYYMMDD) {
+	public Employee(String firstLast, String YYYYMMDD) {
 		setFullname(firstLast);
 		setDateOfHire(Integer.getInteger(YYYYMMDD.substring(0, 3)), Integer.getInteger(YYYYMMDD.substring(4, 5)),
 				Integer.getInteger(YYYYMMDD.substring(6, 7)));

@@ -6,18 +6,20 @@ public class Employee implements Comparable<Employee> {
 
 	public Employee(String firstLast, String YYYYMMDD) {
 		setFullname(firstLast);
-		setDateOfHire(Integer.getInteger(YYYYMMDD.substring(0, 3)), Integer.getInteger(YYYYMMDD.substring(4, 5)),
-				Integer.getInteger(YYYYMMDD.substring(6, 7)));
+		setDateOfHire(
+				Integer.valueOf(YYYYMMDD.substring(0, 4)), 
+				Integer.valueOf(YYYYMMDD.substring(4, 6)),
+						Integer.valueOf(YYYYMMDD.substring(6, 8))
+				);
 	}
 
 	private String fullName = "";
 	private Calendar dateOfHire = Calendar.getInstance();
 
 	@Override
-	public int compareTo(Employee o) {
+	public int compareTo(Employee otherEmployee) {
 		// TODO Auto-generated method stub
-		return dateOfHire.compareTo(o.getDateOfHire());
-
+		return dateOfHire.compareTo(otherEmployee.getDateOfHire())*-1;
 	}
 
 	public void setFullname(String firstLast) {

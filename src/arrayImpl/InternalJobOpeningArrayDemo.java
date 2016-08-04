@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package arrayImpl;
 
@@ -12,7 +12,7 @@ import lab_3.Employee;
 public class InternalJobOpeningArrayDemo {
 
 	public static void demoWaitingList(Employee[] entrants){
-		
+
 		/*
 		 * new Employee("Ahmad El-Baher", "20100405")
 					,new Employee("Alexei Ostroouchko", "20100412")
@@ -31,23 +31,23 @@ public class InternalJobOpeningArrayDemo {
 					,new Employee("Hannah Halcro", "20130626")
 					,new Employee("Hassan Syyed", "20140127")
 					,new Employee("Hendrik Oosenbrug", "20140207")
-			
+
 		 */
 		System.out.println("Empty");
 		WaitingListArray waitingListArray = new WaitingListArray();
 		System.out.print("Waiting list array contents: " + waitingListArray.toString());
-		
+
 		System.out.println("\n" );
 		System.out.println("1 entry");
 		waitingListArray.addEmployee(entrants[0]);
 		System.out.print("Waiting list array contents: " + waitingListArray.toString());
-		
+
 		System.out.println("\n" );
 		System.out.println("3 entries");
 		waitingListArray.addEmployee(entrants[1]);
 		waitingListArray.addEmployee(entrants[2]);
 		System.out.print("Waiting list array contents: " + waitingListArray.toString());
-		
+
 		System.out.println("\n" );
 		System.out.println("10 entries");
 		waitingListArray.addEmployee(entrants[3]);
@@ -58,6 +58,42 @@ public class InternalJobOpeningArrayDemo {
 		waitingListArray.addEmployee(entrants[8]);
 		waitingListArray.addEmployee(entrants[9]);
 		System.out.print("Waiting list array contents: " + waitingListArray.toString());
+
+
+		System.out.println("\n" );
+		System.out.println("Seek out highest seniority person ");
+		System.out.println(waitingListArray.getNextEmployeeInLine().toString());
+		System.out.print("Waiting list array contents: " + waitingListArray.toString());
+
+		System.out.println("\n" );
+		System.out.println("Seek out highest seniority person ");
+		System.out.println(waitingListArray.getNextEmployeeInLine().toString());
+		System.out.print("Waiting list array contents: " + waitingListArray.toString());
+
+		System.out.println("\n" );
+		System.out.println("Remove highest seniority person ");
+		System.out.println(waitingListArray.giveJobToEmployee().toString());
+		System.out.print("Waiting list array contents: " + waitingListArray.toString());
+
+		System.out.println("\n" );
+		System.out.println("Give everyone a job");
+		waitingListArray.hireEveryone();
+		System.out.print("Waiting list array contents: " + waitingListArray.toString());
+
+		System.out.println("\n" );
+		System.out.println("Add 4 entries, 2 of which have the same priority");
+		waitingListArray.addEmployee(entrants[15]);
+		waitingListArray.addEmployee(entrants[16]);
+		waitingListArray.addEmployee(entrants[17]);
+		waitingListArray.addEmployee(entrants[18]);
+		System.out.print("Waiting list array contents: " + waitingListArray.toString());
 		
+		System.out.println("\n" );
+		System.out.println("Add 4 entries, 2 of which have the same priority");
+		waitingListArray.addEmployee(entrants[15]);
+		waitingListArray.addEmployee(entrants[16]);
+		waitingListArray.addEmployee(entrants[17]);
+		waitingListArray.addEmployee(entrants[18]);
+		System.out.print("Waiting list array contents: " + waitingListArray.toString());
 	}
 }

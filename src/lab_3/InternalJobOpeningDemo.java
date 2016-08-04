@@ -37,7 +37,7 @@ public class InternalJobOpeningDemo {
 					,new Employee("Hamed Hamid", "20130218")
 					,new Employee("Hannah Halcro", "20130626")
 					,new Employee("Hassan Syyed", "20140127")
-					,new Employee("Hendrik Oosenbrug", "20140207")
+					,new Employee("Hendrik Oosenbrug", "20140917")
 					,new Employee("Ho Man Chan", "20140321")
 					,new Employee("Ivan Ilyushchenko", "20140917")
 					,new Employee("James Francis McDougall", "20150507")

@@ -48,8 +48,8 @@ public class Employee implements Comparable<Employee> {
 		String returnString= "";
 		returnString+= "Full Name:" + getFullName() + " Date of Hire: "  
 		+ getDateOfHire().get(Calendar.YEAR)
-		+ getDateOfHire().get(Calendar.MONTH)
-		+ getDateOfHire().get(Calendar.DATE);
+		+ "-" + getDateOfHire().get(Calendar.MONTH)
+		+ "-" + getDateOfHire().get(Calendar.DATE);
 		//+ getDateOfHire().getTimeInMillis();		
 		return returnString;
 	}

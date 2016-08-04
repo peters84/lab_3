@@ -29,4 +29,8 @@ public class WaitingListArray {
 	public Employee getNextEmployee(){
 		return waitingList.peek();
 	} // end getNextEmployee
+	
+	public String toString(){
+		return waitingList.toString();
+	}
 }

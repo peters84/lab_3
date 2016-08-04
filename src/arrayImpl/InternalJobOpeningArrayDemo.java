@@ -87,7 +87,7 @@ public class InternalJobOpeningArrayDemo {
 		waitingListArray.addEmployee(entrants[17]);
 		waitingListArray.addEmployee(entrants[18]);
 		System.out.print("Waiting list array contents: " + waitingListArray.toString());
-		
+
 		System.out.println("\n" );
 		System.out.println("Add 4 entries, 2 of which have the same priority");
 		waitingListArray.addEmployee(entrants[15]);
@@ -95,5 +95,25 @@ public class InternalJobOpeningArrayDemo {
 		waitingListArray.addEmployee(entrants[17]);
 		waitingListArray.addEmployee(entrants[18]);
 		System.out.print("Waiting list array contents: " + waitingListArray.toString());
+
+
+		System.out.println("\n" );
+		System.out.println("Add 5 entrants to  first waiting list");
+		waitingListArray.hireEveryone();
+		waitingListArray.addEmployee(entrants[0]);
+		waitingListArray.addEmployee(entrants[1]);
+		waitingListArray.addEmployee(entrants[2]);
+		waitingListArray.addEmployee(entrants[3]);
+		waitingListArray.addEmployee(entrants[4]);
+		System.out.print("Waiting list 1 array contents: " + waitingListArray.toString());
+		System.out.println("Add 5 entrants to second waiting list");
+		WaitingListArray wL2 = new WaitingListArray();
+		wL2.addEmployee(entrants[5]);
+		wL2.addEmployee(entrants[6]);
+		wL2.addEmployee(entrants[7]);
+		wL2.addEmployee(entrants[8]);
+		wL2.addEmployee(entrants[9]);
+		System.out.print("Waiting list 2 array contents: " + wL2.toString());
+		//waitingListArray.mergeWithWaitinglist(wL2);
 	}
 }

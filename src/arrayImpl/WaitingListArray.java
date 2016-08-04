@@ -43,7 +43,17 @@ public class WaitingListArray {
 
 		}
 
+
 	}
+/*
+	public void mergeWithWaitinglist(WaitingListArray wl1){
+		waitingList.joinArrayWithPriorityQueue(wl1);
+	}
+
+	public WaitingListArray mergeWaitingLists(WaitingListArray wl1,WaitingListArray wl2){
+		waitingList.joinArrayPriorityQueues(wl1, wl2);
+	}
+*/
 	public String toString(){
 		return waitingList.toString();
 	}

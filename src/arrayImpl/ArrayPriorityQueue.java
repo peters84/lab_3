@@ -90,19 +90,48 @@ public class ArrayPriorityQueue<T extends Comparable<? super T>> implements Prio
 		return populatedArrayCopy;
 	}
 
-	public ArrayPriorityQueue<T> joinArrayPriorityQueues(ArrayPriorityQueue<T> apq1,ArrayPriorityQueue<T> apq2){
-		int mergedCapacity = apq1.getCurrentSize() + apq2.getCurrentSize();
+
+	public void joinArrayWithPriorityQueue(ArrayPriorityQueue<T> apq1){
+		int apq1Entries =  apq1.getCurrentSize();
+		int mergedCapacity = apq1Entries + capacity;
+
+		@SuppressWarnings("unchecked")
+		T[] mergedArray = (T[])(new Comparable[mergedCapacity]);
+		T[] mergingArray = apq1.toArray();
+
 		ArrayPriorityQueue<T> mergedArrayPriorityQueue = new ArrayPriorityQueue<T>(mergedCapacity);
 
-		for (int i =0; i< apq1.getCurrentSize();i++){
-			mergedArrayPriorityQueue.add(apq1.remove());
+		for (int i =0; i< numberOfEntries;i++){
+			mergedArrayPriorityQueue.add(theArray[i]);
 		}
-		for (int i =0; i< apq2.getCurrentSize();i++){
-			mergedArrayPriorityQueue.add(apq2.remove());
+		for (int i =0; i< apq1Entries;i++){
+			mergedArrayPriorityQueue.add(mergingArray[i]);
 		}
-		return mergedArrayPriorityQueue;
+
+		theArray = mergedArrayPriorityQueue.toArray();
+
 	}
 
+	public ArrayPriorityQueue<T> joinArrayPriorityQueues(ArrayPriorityQueue<T> apq1,ArrayPriorityQueue<T> apq2){
+		int apq1Size = apq1.getCurrentSize();
+		int apq2Size = apq2.getCurrentSize();
+		T[] apq1Array = apq1.toArray();
+		T[] apq2Array = apq2.toArray();
+
+		int mergedCapacity = apq1Size+ apq2Size;
+
+		ArrayPriorityQueue<T> mergedArrayPriorityQueue = new ArrayPriorityQueue<T>(mergedCapacity);
+
+		for (int i =0; i< apq1Size;i++){
+			mergedArrayPriorityQueue.add(apq1Array[i]);
+		}
+		for (int i =0; i< apq2Size;i++){
+			mergedArrayPriorityQueue.add(apq2Array[i]);
+		}
+
+		return mergedArrayPriorityQueue;
+
+	}
 
 	public String toString(){
 		String theString = "";
@@ -112,5 +141,10 @@ public class ArrayPriorityQueue<T extends Comparable<? super T>> implements Prio
 		return theString;
 	}
 
+	public void clear(){
+		for (int i = 0; i<numberOfEntries;i++){
+			remove();
+		}
+	}
 
 }

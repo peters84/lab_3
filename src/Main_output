@@ -1,0 +1,36 @@
+
+// Example of how my priority queue works
+
+/**
+
+The queue elements are: 
+Jack
+Jeff
+John
+Jill
+Jim
+The element stored at the front is: Jack
+The element removed from the front is: Jack
+The size of the queue is: 4
+The queue is now empty!
+Is the queue empty: true
+
+Adding new elements to the queue: 
+Shehryar
+Taha
+Omer
+Jill
+Ravi
+
+The element removed from the front is: Shehryar
+The element removed from the front is: Taha
+The element removed from the front is: Omer
+The element stored at the front of the queue is: Jill
+
+The queue contains: 
+Jill
+Ravi
+Is the queue empty: false
+
+
+*/
